@@ -1,0 +1,552 @@
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Barlow+Condensed:ital,wght@0,700;0,900;1,900&display=swap');
+
+    *,
+    *::before,
+    *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    :root {
+        --orange: #f97316;
+        --orange-dk: #e06010;
+        --bg: #111111;
+        --bg-input: #1e1e1e;
+        --bg-social: #1c1c1c;
+        --border: #2e2e2e;
+        --white: #ffffff;
+        --muted: #888888;
+        --muted-lt: #aaaaaa;
+        --red-glow: rgba(220, 40, 40, 0.55);
+        --radius: 10px;
+    }
+
+    html,
+    body {
+        min-height: 100vh;
+        font-family: 'Inter', sans-serif;
+        background: var(--bg);
+        color: var(--white);
+    }
+
+    /* ═══════════════════════════════════
+       PAGE SHELL
+    ═══════════════════════════════════ */
+    .page {
+        display: flex;
+        min-height: 100vh;
+        justify-content: center;
+        align-items: stretch;
+    }
+
+    /* ═══════════════════════════════════
+       LEFT PANEL — hero (desktop only)
+    ═══════════════════════════════════ */
+    .hero-panel {
+        display: none;
+        flex: 1;
+        position: relative;
+        overflow: hidden;
+        background: #0a0a0a;
+    }
+
+    .hero-bg {
+        position: absolute;
+        inset: 0;
+        background-image: url('image/download2.jpg');
+        background-position: center;
+        background-size: cover;
+        z-index: 1;
+        /* background:
+        radial-gradient(ellipse 80% 60% at 50% 30%, rgba(220,40,40,0.28) 0%, transparent 65%),
+        linear-gradient(to bottom, #1a0606 0%, #0d0d0d 55%, #080808 100%); */
+    }
+
+    /* garage ceiling lights */
+    /* .hero-lights {
+      position: absolute; top: 0; left: 0; right: 0; height: 6px;
+      background: repeating-linear-gradient(
+        90deg,
+        transparent 0px, transparent 60px,
+        rgba(220,40,40,0.7) 60px, rgba(220,40,40,0.7) 64px
+      );
+      box-shadow: 0 0 30px 6px rgba(220,40,40,0.4);
+    } */
+
+    .hero-car {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* SVG race car illustration */
+    .hero-car svg {
+        width: min(520px, 88%);
+        filter: drop-shadow(0 0 40px rgba(0, 180, 255, 0.25));
+    }
+
+    .hero-brand {
+        position: absolute;
+        bottom: 60px;
+        left: 0;
+        right: 0;
+        text-align: center;
+    }
+
+    .hero-logo {
+        font-family: 'Barlow Condensed', sans-serif;
+        font-size: clamp(52px, 6vw, 80px);
+        font-weight: 900;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        line-height: 1;
+    }
+
+    .hero-logo .velo {
+        color: var(--white);
+    }
+
+    .hero-logo .cita {
+        color: var(--orange);
+    }
+
+    .hero-sub {
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 6px;
+        text-transform: uppercase;
+        color: var(--muted-lt);
+        margin-top: 8px;
+    }
+
+    /* floor reflection */
+    .hero-floor {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 140px;
+        background: linear-gradient(to top, rgba(249, 115, 22, 0.06) 0%, transparent 100%);
+    }
+
+    /* vertical red lines (garage walls) */
+    /* .hero-wall-l, .hero-wall-r {
+      position: absolute; top: 0; bottom: 0; width: 3px;
+      background: linear-gradient(to bottom, rgba(220,40,40,0.9) 0%, rgba(220,40,40,0.1) 80%, transparent);
+      box-shadow: 0 0 18px 4px rgba(220,40,40,0.5);
+    } */
+    .hero-wall-l {
+        left: 48px;
+    }
+
+    .hero-wall-r {
+        right: 48px;
+    }
+
+    /* ═══════════════════════════════════
+       RIGHT PANEL — login form
+    ═══════════════════════════════════ */
+    .login-panel {
+        width: 100%;
+        max-width: 430px;
+        display: flex;
+        flex-direction: column;
+        background: var(--bg);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .login-panel a {
+        text-decoration: none;
+    }
+
+    /* ── Hero image (mobile only, top of form) ── */
+    .mobile-hero {
+        position: relative;
+        width: 100%;
+        height: 280px;
+        overflow: hidden;
+        flex-shrink: 0;
+    }
+
+    .mobile-hero-bg {
+        position: absolute;
+        inset: 0;
+        background-image: url('image/download2.jpg');
+        background-position: center;
+        background-size: cover;
+    }
+
+    .mobile-lights {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 5px;
+        background: repeating-linear-gradient(90deg,
+                transparent 0px, transparent 50px,
+                rgba(220, 40, 40, 0.75) 50px, rgba(220, 40, 40, 0.75) 53px);
+        box-shadow: 0 0 20px 5px rgba(220, 40, 40, 0.45);
+    }
+
+    .mobile-wall-l,
+    .mobile-wall-r {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 3px;
+        background: linear-gradient(to bottom, rgba(220, 40, 40, 0.95) 0%, rgba(220, 40, 40, 0.15) 80%, transparent);
+        box-shadow: 0 0 16px 4px rgba(220, 40, 40, 0.55);
+    }
+
+    .mobile-wall-l {
+        left: 28px;
+    }
+
+    .mobile-wall-r {
+        right: 28px;
+    }
+
+    .mobile-car {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 20px;
+    }
+
+    .mobile-car svg {
+        width: min(320px, 86%);
+        filter: drop-shadow(0 0 28px rgba(0, 180, 255, 0.2));
+    }
+
+    .mobile-brand {
+        position: absolute;
+        bottom: 18px;
+        left: 0;
+        right: 0;
+        text-align: center;
+    }
+
+    .mobile-logo {
+        font-family: 'Barlow Condensed', sans-serif;
+        font-size: 42px;
+        font-weight: 900;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        line-height: 1;
+    }
+
+    .mobile-logo .velo {
+        color: var(--white);
+    }
+
+    .mobile-logo .cita {
+        color: var(--orange);
+    }
+
+    .mobile-sub {
+        font-size: 9px;
+        font-weight: 700;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        color: var(--muted-lt);
+        margin-top: 5px;
+    }
+
+    /* fade bottom of hero into form bg */
+    .mobile-fade {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 60px;
+        background: linear-gradient(to bottom, transparent, var(--bg));
+    }
+
+    /* ── FORM SECTION ── */
+    .form-section {
+        flex: 1;
+        padding: 32px 28px 40px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .welcome-title {
+        font-family: 'Barlow Condensed', sans-serif;
+        font-size: 34px;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        line-height: 1;
+        margin-bottom: 8px;
+    }
+
+    .welcome-sub {
+        font-size: 13px;
+        color: var(--muted-lt);
+        font-weight: 400;
+        margin-bottom: 28px;
+        line-height: 1.4;
+    }
+
+    /* INPUT GROUP */
+    .input-group {
+        position: relative;
+        margin-bottom: 14px;
+    }
+
+    .input-icon {
+        position: absolute;
+        left: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 18px;
+        height: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        pointer-events: none;
+    }
+
+    .input-icon svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .input-field {
+        width: 100%;
+        background: var(--bg-input);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        color: var(--white);
+        font-family: 'Inter', sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        padding: 15px 16px 15px 46px;
+        outline: none;
+        transition: border-color .2s, box-shadow .2s;
+    }
+
+    .input-field::placeholder {
+        color: var(--muted);
+    }
+
+    .input-field:focus {
+        border-color: var(--orange);
+        box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.12);
+    }
+
+    .input-eye {
+        position: absolute;
+        right: 14px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 22px;
+        height: 22px;
+        cursor: pointer;
+        opacity: 0.5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: opacity .2s;
+    }
+
+    .input-eye:hover {
+        opacity: 0.9;
+    }
+
+    .input-eye svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    /* FORGOT */
+    .forgot-row {
+        text-align: right;
+        margin-bottom: 24px;
+        margin-top: 4px;
+    }
+
+    .forgot-link {
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: var(--orange);
+        text-decoration: none;
+        cursor: pointer;
+        transition: opacity .2s;
+    }
+
+    .forgot-link:hover {
+        opacity: 0.75;
+    }
+
+    /* SUBMIT BUTTON */
+    .btn-enter {
+        width: 100%;
+        background: var(--orange);
+        color: var(--white);
+        text-decoration: none;
+        border: none;
+        border-radius: var(--radius);
+        padding: 16px 20px;
+        font-family: 'Barlow Condensed', sans-serif;
+        font-size: 20px;
+        font-weight: 900;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        transition: background .2s, transform .15s, box-shadow .2s;
+        box-shadow: 0 4px 24px rgba(249, 115, 22, 0.30);
+    }
+
+    .btn-enter:hover {
+        background: var(--orange-dk);
+        transform: translateY(-1px);
+        box-shadow: 0 6px 28px rgba(249, 115, 22, 0.42);
+    }
+
+    .btn-enter:active {
+        transform: translateY(0);
+    }
+
+    .btn-enter svg {
+        width: 22px;
+        height: 22px;
+        flex-shrink: 0;
+    }
+
+    /* OR DIVIDER */
+    .or-divider {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin: 24px 0 18px;
+    }
+
+    .or-line {
+        flex: 1;
+        height: 1px;
+        background: var(--border);
+    }
+
+    .or-text {
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: var(--muted);
+    }
+
+    /* SOCIAL BUTTONS */
+    .social-row {
+        display: flex;
+        gap: 12px;
+    }
+
+    .btn-social {
+        flex: 1;
+        background: var(--bg-social);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: background .2s, border-color .2s, transform .15s;
+    }
+
+    .btn-social:hover {
+        background: #252525;
+        border-color: #444;
+        transform: translateY(-1px);
+    }
+
+    .btn-social svg {
+        width: 22px;
+        height: 22px;
+    }
+
+    /* REGISTER LINK */
+    .register-row {
+        text-align: center;
+        margin-top: 28px;
+        font-size: 13px;
+        color: var(--muted);
+    }
+
+    .register-link {
+        color: var(--orange);
+        font-weight: 800;
+        font-size: 12px;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+        text-decoration: none;
+        cursor: pointer;
+        transition: opacity .2s;
+    }
+
+    .register-link:hover {
+        opacity: 0.75;
+    }
+
+    /* ═══════════════════════════════════
+       DESKTOP  ≥ 860px
+    ═══════════════════════════════════ */
+    @media (min-width: 860px) {
+        .page {
+            align-items: stretch;
+        }
+
+        /* show left hero panel */
+        .hero-panel {
+            display: flex;
+            flex-direction: 1;
+            position: relative;
+            overflow: hidden;
+            background: #0a0a0a;
+        }
+
+        /* hide mobile hero, center form panel */
+        .mobile-hero {
+            display: none;
+        }
+
+        .login-panel {
+            max-width: 440px;
+            min-height: 100vh;
+            border-left: 1px solid #1e1e1e;
+            justify-content: center;
+        }
+
+        .form-section {
+            flex: unset;
+            padding: 48px 44px;
+            justify-content: center;
+        }
+
+        .welcome-title {
+            font-size: 38px;
+        }
+    }
+
+    @media (min-width: 1200px) {
+        .login-panel {
+            max-width: 480px;
+        }
+
+        .form-section {
+            padding: 56px 52px;
+        }
+    }

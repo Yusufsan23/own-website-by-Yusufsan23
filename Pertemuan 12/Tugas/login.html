@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SIMRACE.ID – Login</title>
+  <link rel="icon" type="image/png" href="image/icon-Photoroom.png">
+  <link rel="stylesheet" href="style-login.css">
+
+</head>
+<body>
+<div class="page">
+
+  <!-- ══ LEFT HERO PANEL (desktop) ══ -->
+  <div class="hero-panel">
+    <div class="hero-bg"></div>
+    <div class="hero-lights"></div>
+    <div class="hero-wall-l"></div>
+    <div class="hero-wall-r"></div>
+    <div class="hero-floor"></div>
+
+    <div class="hero-car">
+      <!-- Race car SVG illustration -->
+      <!-- <svg viewBox="0 0 520 200" fill="none" xmlns="http://www.w3.org/2000/svg"> -->
+        <!-- Ground shadow -->
+        <ellipse cx="260" cy="192" rx="220" ry="10" fill="rgba(0,0,0,0.55)"/>
+        <!-- Body lower -->
+        <path d="M60 148 Q80 130 140 124 L200 110 L320 110 L380 124 Q440 130 460 148 L460 168 Q440 176 260 178 Q80 176 60 168 Z"
+              fill="#1a1a2e" stroke="#0a0a1a" stroke-width="1.5"/>
+        <!-- Body upper -->
+        <path d="M150 110 Q170 75 210 64 L260 58 L310 64 Q350 75 370 110 Z"
+              fill="#151525" stroke="#0e0e1e" stroke-width="1.5"/>
+        <!-- Cockpit canopy -->
+        <path d="M190 110 Q200 72 230 62 L260 58 L290 62 Q320 72 330 110 Z"
+              fill="#0d0d20"/>
+        <!-- Canopy glass -->
+        <path d="M200 108 Q212 76 238 65 L260 61 L282 65 Q308 76 320 108 Z"
+              fill="rgba(0,150,255,0.10)" stroke="rgba(0,180,255,0.25)" stroke-width="1"/>
+        <!-- Front wing -->
+        <path d="M60 148 L30 152 L28 162 L60 162 Z" fill="#111120" stroke="#0a0a18" stroke-width="1"/>
+        <path d="M460 148 L490 152 L492 162 L460 162 Z" fill="#111120" stroke="#0a0a18" stroke-width="1"/>
+        <!-- Rear wing pillar -->
+        <rect x="348" y="106" width="6" height="22" fill="#0e0e1e"/>
+        <rect x="366" y="106" width="6" height="22" fill="#0e0e1e"/>
+        <!-- Rear wing -->
+        <rect x="330" y="100" width="100" height="9" rx="2" fill="#111120" stroke="#0a0a18" stroke-width="1"/>
+        <!-- Side air intakes -->
+        <path d="M160 124 L155 138 L175 138 L178 124 Z" fill="#0a0a18"/>
+        <path d="M360 124 L362 138 L382 138 L365 124 Z" fill="#0a0a18"/>
+        <!-- Orange accent stripe -->
+        <path d="M110 148 L400 148 L396 154 L114 154 Z" fill="rgba(249,115,22,0.75)"/>
+        <!-- Front splitter -->
+        <rect x="50" y="160" width="70" height="5" rx="1" fill="#0d0d1a"/>
+        <!-- Diffuser -->
+        <rect x="390" y="160" width="70" height="5" rx="1" fill="#0d0d1a"/>
+        <!-- BMW badge placeholder -->
+        <circle cx="260" cy="80" r="8" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+        <!-- Front wheel -->
+        <circle cx="120" cy="172" r="24" fill="#111" stroke="#222" stroke-width="2"/>
+        <circle cx="120" cy="172" r="16" fill="#0d0d0d" stroke="#333" stroke-width="1.5"/>
+        <circle cx="120" cy="172" r="6" fill="#1a1a1a"/>
+        <!-- Front wheel glow -->
+        <circle cx="120" cy="172" r="24" fill="none" stroke="rgba(0,160,255,0.12)" stroke-width="3"/>
+        <!-- Rear wheel -->
+        <circle cx="390" cy="172" r="26" fill="#111" stroke="#222" stroke-width="2"/>
+        <circle cx="390" cy="172" r="18" fill="#0d0d0d" stroke="#333" stroke-width="1.5"/>
+        <circle cx="390" cy="172" r="7" fill="#1a1a1a"/>
+        <!-- Rear wheel glow -->
+        <circle cx="390" cy="172" r="26" fill="none" stroke="rgba(0,160,255,0.12)" stroke-width="3"/>
+        <!-- Headlights -->
+        <ellipse cx="75" cy="148" rx="12" ry="5" fill="rgba(0,180,255,0.55)" filter="url(#glow)"/>
+        <ellipse cx="75" cy="148" rx="6" ry="3" fill="rgba(180,230,255,0.8)"/>
+        <!-- Brake light -->
+        <rect x="453" y="144" width="8" height="6" rx="2" fill="rgba(220,40,40,0.85)"/>
+        <!-- Floor glow -->
+        <ellipse cx="260" cy="184" rx="180" ry="6" fill="rgba(0,100,200,0.08)"/>
+        <defs>
+          <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="3" result="blur"/>
+            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+        </defs>
+      </svg>
+    </div>
+
+    <div class="hero-brand">
+      <div class="hero-logo">
+        <span class="velo">SIM</span><span class="cita">RACE</span>
+      </div>
+      <div class="hero-sub">— Pro Racing Series —</div>
+    </div>
+  </div>
+
+
+  <!-- ══ RIGHT LOGIN PANEL ══ -->
+  <div class="login-panel">
+
+    <!-- Mobile hero (hidden on desktop) -->
+    <div class="mobile-hero">
+      <div class="mobile-hero-bg"></div>
+      <div class="mobile-lights"></div>
+      <div class="mobile-wall-l"></div>
+      <div class="mobile-wall-r"></div>
+      <!-- <div class="mobile-car">
+        <svg viewBox="0 0 520 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="260" cy="192" rx="220" ry="10" fill="rgba(0,0,0,0.55)"/>
+          <path d="M60 148 Q80 130 140 124 L200 110 L320 110 L380 124 Q440 130 460 148 L460 168 Q440 176 260 178 Q80 176 60 168 Z" fill="#1a1a2e" stroke="#0a0a1a" stroke-width="1.5"/>
+          <path d="M150 110 Q170 75 210 64 L260 58 L310 64 Q350 75 370 110 Z" fill="#151525" stroke="#0e0e1e" stroke-width="1.5"/>
+          <path d="M190 110 Q200 72 230 62 L260 58 L290 62 Q320 72 330 110 Z" fill="#0d0d20"/>
+          <path d="M200 108 Q212 76 238 65 L260 61 L282 65 Q308 76 320 108 Z" fill="rgba(0,150,255,0.10)" stroke="rgba(0,180,255,0.25)" stroke-width="1"/>
+          <path d="M60 148 L30 152 L28 162 L60 162 Z" fill="#111120" stroke="#0a0a18" stroke-width="1"/>
+          <path d="M460 148 L490 152 L492 162 L460 162 Z" fill="#111120" stroke="#0a0a18" stroke-width="1"/>
+          <rect x="348" y="106" width="6" height="22" fill="#0e0e1e"/>
+          <rect x="366" y="106" width="6" height="22" fill="#0e0e1e"/>
+          <rect x="330" y="100" width="100" height="9" rx="2" fill="#111120" stroke="#0a0a18" stroke-width="1"/>
+          <path d="M160 124 L155 138 L175 138 L178 124 Z" fill="#0a0a18"/>
+          <path d="M360 124 L362 138 L382 138 L365 124 Z" fill="#0a0a18"/>
+          <path d="M110 148 L400 148 L396 154 L114 154 Z" fill="rgba(249,115,22,0.75)"/>
+          <rect x="50" y="160" width="70" height="5" rx="1" fill="#0d0d1a"/>
+          <rect x="390" y="160" width="70" height="5" rx="1" fill="#0d0d1a"/>
+          <circle cx="120" cy="172" r="24" fill="#111" stroke="#222" stroke-width="2"/>
+          <circle cx="120" cy="172" r="16" fill="#0d0d0d" stroke="#333" stroke-width="1.5"/>
+          <circle cx="120" cy="172" r="6" fill="#1a1a1a"/>
+          <circle cx="120" cy="172" r="24" fill="none" stroke="rgba(0,160,255,0.12)" stroke-width="3"/>
+          <circle cx="390" cy="172" r="26" fill="#111" stroke="#222" stroke-width="2"/>
+          <circle cx="390" cy="172" r="18" fill="#0d0d0d" stroke="#333" stroke-width="1.5"/>
+          <circle cx="390" cy="172" r="7" fill="#1a1a1a"/>
+          <circle cx="390" cy="172" r="26" fill="none" stroke="rgba(0,160,255,0.12)" stroke-width="3"/>
+          <ellipse cx="75" cy="148" rx="12" ry="5" fill="rgba(0,180,255,0.55)"/>
+          <ellipse cx="75" cy="148" rx="6" ry="3" fill="rgba(180,230,255,0.8)"/>
+          <rect x="453" y="144" width="8" height="6" rx="2" fill="rgba(220,40,40,0.85)"/>
+        </svg>
+      </div> -->
+      <div class="mobile-brand">
+        <div class="mobile-logo"><span class="velo">SIM</span><span class="cita">RACE</span></div>
+        <div class="mobile-sub">— Pro Racing Series —</div>
+      </div>
+      <div class="mobile-fade"></div>
+    </div>
+
+    <!-- FORM -->
+    <div class="form-section">
+      <h1 class="welcome-title">Welcome Back</h1>
+      <p class="welcome-sub">Ignite your engines and gear up for the track.</p>
+
+      <!-- Name input -->
+      <div class="input-group">
+        <div class="input-icon">
+          <!-- Person icon -->
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="8" r="4" stroke="#666" stroke-width="1.8"/>
+            <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" stroke="#666" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <input class="input-field" type="text" placeholder="Your Name" autocomplete="username"/>
+      </div>
+
+      <!-- Password input -->
+      <div class="input-group">
+        <div class="input-icon">
+          <!-- Lock icon -->
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="5" y="11" width="14" height="10" rx="2" stroke="#666" stroke-width="1.8"/>
+            <path d="M8 11V7a4 4 0 018 0v4" stroke="#666" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <input class="input-field" type="password" id="pwdField" placeholder="Password" autocomplete="current-password" style="padding-right:46px;"/>
+        <div class="input-eye" id="eyeToggle" onclick="togglePwd()" title="Show/hide password">
+          <!-- Eye-off icon -->
+          <svg id="eyeIcon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.94 17.94A10.07 10.07 0 0112 20c-7 0-11-8-11-8a18.45 18.45 0 015.06-5.94" stroke="#666" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M9.9 4.24A9.12 9.12 0 0112 4c7 0 11 8 11 8a18.5 18.5 0 01-2.16 3.19" stroke="#666" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            <line x1="1" y1="1" x2="23" y2="23" stroke="#666" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Forgot -->
+      <div class="forgot-row">
+        <a class="forgot-link" href="#">Forgot Password?</a>
+      </div>
+
+      <!-- Submit -->
+    <a href="index.html">
+      <button class="btn-enter" type="button">
+        Enter Track
+        <!-- Lightning bolt icon -->
+        <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+          <path d="M13 2L4.5 13.5H11L10 22L20.5 10H14L13 2Z" fill="white"/>
+        </svg>
+      </button>
+    </a>
+
+      <!-- Divider -->
+      <div class="or-divider">
+        <div class="or-line"></div>
+        <span class="or-text">Or Connect With</span>
+        <div class="or-line"></div>
+      </div>
+
+      <!-- Social -->
+      <div class="social-row">
+        <!-- Google -->
+        <button class="btn-social" type="button" title="Continue with Google">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#ffffff" opacity=".9"/>
+            <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#ffffff" opacity=".8"/>
+            <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#ffffff" opacity=".7"/>
+            <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#ffffff" opacity=".9"/>
+          </svg>
+        </button>
+        <!-- Apple -->
+        <button class="btn-social" type="button" title="Continue with Apple">
+          <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.7 9.05 7.4c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.53 3.99zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Register -->
+      <div class="register-row">
+        New to the circuit? &nbsp;<a class="register-link" href="#">Join the Team</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  function togglePwd() {
+    const f = document.getElementById('pwdField');
+    const icon = document.getElementById('eyeIcon');
+    if (f.type === 'password') {
+      f.type = 'text';
+      icon.innerHTML = `
+        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" stroke="#888" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="12" cy="12" r="3" stroke="#888" stroke-width="1.8"/>
+      `;
+    } else {
+      f.type = 'password';
+      icon.innerHTML = `
+        <path d="M17.94 17.94A10.07 10.07 0 0112 20c-7 0-11-8-11-8a18.45 18.45 0 015.06-5.94" stroke="#666" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M9.9 4.24A9.12 9.12 0 0112 4c7 0 11 8 11 8a18.5 18.5 0 01-2.16 3.19" stroke="#666" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        <line x1="1" y1="1" x2="23" y2="23" stroke="#666" stroke-width="1.8" stroke-linecap="round"/>
+      `;
+    }
+  }
+</script>
+</body>
+</html>
