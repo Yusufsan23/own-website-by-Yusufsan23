@@ -1,177 +1,137 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Account Dashboard</title>
-    <link rel="icon" type="image/png" href="image/icon-Photoroom.png">
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIMRACE.ID - Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style-dashboard.css">
-  </head>
-  <body>
+</head>
+<body>
+
     <div class="app-shell">
-      <header class="topbar">
-        <div class="topbar-brand">
-          <svg viewBox="0 0 24 24" fill="none">
-            <circle cx="12" cy="12" r="9" stroke="#f97316" stroke-width="1.8" />
-            <circle cx="12" cy="12" r="3" stroke="#f97316" stroke-width="1.8" />
-            <line x1="12" y1="3" x2="12" y2="9" stroke="#f97316" stroke-width="1.8" stroke-linecap="round" />
-            <line x1="3.87" y1="16.5" x2="9.18" y2="13.5" stroke="#f97316" stroke-width="1.8" stroke-linecap="round" />
-            <line x1="20.13" y1="16.5" x2="14.82" y2="13.5" stroke="#f97316" stroke-width="1.8" stroke-linecap="round" />
-          </svg>
-          Dashboard
-        </div>
-        <nav class="topbar-nav">
-          <a href="#" class="active">Drive</a>
-          <a href="#">Setup</a>
-          <a href="#">Team</a>
-          <a href="#">Settings</a>
-        </nav>
-        <div class="topbar-right">
-          <a href="login.html"><button class="topbar-badge">Logout</button></a>
-        </div>
-      </header>
-
-      <main class="content-area">
         
-        <div class="desktop-sidebar">
-          <div class="profile-card">
-            <div class="profile-row">
-              <div class="avatar-wrap">
-                <div class="avatar">MV</div>
-                <div class="flag-badge">
-                  <span class="fc-g"></span><span class="fc-w"></span><span class="fc-r"></span>
-                </div>
-              </div>
-              <div class="driver-info">
-                <h1>Marco<br />Veloce</h1>
-                <div class="driver-rank">
-                  <span class="badge-pro">PRO</span>
-                  <span class="rank-text">Global Rank: #412</span>
-                </div>
-              </div>
+        <header class="topbar">
+            <div class="topbar-brand">
+                <span>SIM</span><span class="highlight">RACE</span><span>.ID</span>
             </div>
-            <button class="btn-go-race">
-              GO RACE
-              <svg class="chk-icon" viewBox="0 0 24 24" fill="none">
-                <rect x="3" y="3" width="4" height="4" fill="white" />
-                <rect x="7" y="3" width="4" height="4" fill="black" fill-opacity=".4" />
-                <rect x="11" y="3" width="4" height="4" fill="white" />
-                <rect x="15" y="3" width="4" height="4" fill="black" fill-opacity=".4" />
-                <rect x="3" y="7" width="4" height="4" fill="black" fill-opacity=".4" />
-                <rect x="7" y="7" width="4" height="4" fill="white" />
-                <rect x="11" y="7" width="4" height="4" fill="black" fill-opacity=".4" />
-                <rect x="15" y="7" width="4" height="4" fill="white" />
-                <rect x="3" y="11" width="4" height="4" fill="white" />
-                <rect x="7" y="11" width="4" height="4" fill="black" fill-opacity=".4" />
-                <rect x="11" y="11" width="4" height="4" fill="white" />
-                <rect x="15" y="11" width="4" height="4" fill="black" fill-opacity=".4" />
-                <line x1="3" y1="3" x2="3" y2="18" stroke="white" stroke-width="2" />
-              </svg>
-            </button>
-          </div>
-        </div>
+            <nav class="topbar-nav">
+                <a href="#" class="active">Drive</a>
+                <a href="#">Setup</a>
+                <a href="#">Team</a>
+                <a href="#">Settings</a>
+            </nav>
+            <div class="topbar-right">
+                <button class="btn-logout">Logout</button>
+            </div>
+        </header>
 
-        <div class="desktop-main">
-          <div class="stats-grid">
-            <div class="stat-card">
-              <div class="stat-label">Wins</div>
-              <div class="stat-icon-wrap">
-                <svg viewBox="0 0 24 24" fill="none">
-                  <path d="M8 21h8M12 17v4M7 4H4a1 1 0 00-1 1v3a4 4 0 004 4h.5M17 4h3a1 1 0 011 1v3a4 4 0 01-4 4h-.5" stroke="#f97316" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M7.5 12A4.5 4.5 0 0012 16.5 4.5 4.5 0 0016.5 12V4h-9v8z" stroke="#f97316" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </div>
-              <div class="stat-value">24</div>
-              <div class="stat-sub green">+2 this week</div>
-            </div>
-            <div class="stat-card">
-              <div class="stat-label">Podiums</div>
-              <div class="stat-icon-wrap">
-                <svg viewBox="0 0 24 24" fill="none">
-                  <circle cx="12" cy="8" r="4" stroke="#f97316" stroke-width="1.8" />
-                  <path d="M9 12.5L7.5 20h9L15 12.5" stroke="#f97316" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M9 16h6" stroke="#f97316" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </div>
-              <div class="stat-value">58</div>
-              <div class="stat-sub muted">Top 15%</div>
-            </div>
-          </div>
+        <main class="content-area">
+            
+            <section class="desktop-sidebar">
+                <div class="profile-card">
+                    <div class="profile-row">
+                        <div class="avatar-wrap">
+                            <div class="avatar">MV</div>
+                        </div>
+                        <div class="profile-info">
+                            <h2 class="driver-name">MARCO VELOCE</h2>
+                            <div class="badge-row">
+                                <span class="badge-flag">🇮🇹</span>
+                                <span class="badge-pro">PRO</span>
+                                <span class="global-rank">Global Rank: #412</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn-go-race">GO RACE 🏁</button>
+                </div>
+            </section>
 
-          <div class="ratings-card-wrap">
-            <div class="section-title">
-              Driver Ratings
-              <svg viewBox="0 0 24 24" fill="none" style="width:16px; height:16px;">
-                <polyline points="3,17 9,11 13,15 21,7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                <polyline points="15,7 21,7 21,13" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-            </div>
-            <div class="ratings-card">
-              <div class="rating-row">
-                <div class="rating-header">
-                  <span class="rating-name">SAFETY RATING (SR)</span>
-                  <span class="rating-value">S 4.98</span>
+            <section class="desktop-main">
+                
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <div class="stat-content">
+                            <span class="stat-label">WINS</span>
+                            <span class="stat-value">24</span>
+                            <span class="stat-sub green">+2 this week</span>
+                        </div>
+                        <div class="stat-icon">🏆</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-content">
+                            <span class="stat-label">PODIUMS</span>
+                            <span class="stat-value">58</span>
+                            <span class="stat-sub text-muted">Top 15%</span>
+                        </div>
+                        <div class="stat-icon">🥇</div>
+                    </div>
                 </div>
-                <div class="rating-bar-bg">
-                  <div class="rating-bar-fill" style="width: 92%"></div>
-                </div>
-              </div>
-              <div class="rating-row">
-                <div class="rating-header">
-                  <span class="rating-name">DRIVER RATING (DR)</span>
-                  <span class="rating-value">A+ 7,420</span>
-                </div>
-                <div class="rating-bar-bg">
-                  <div class="rating-bar-fill" style="width: 74%"></div>
-                </div>
-              </div>
-            </div>
-          </div>
 
-          <div class="licenses-wrap">
-            <div class="section-title">Active Licenses</div>
-            <div class="licenses-row">
-              <div class="license-card">
-                <div class="license-icon-wrap">
-                  <svg viewBox="0 0 24 24" fill="none">
-                    <path d="M3 17L5 8l4.5 4.5L12 4l2.5 8.5L19 8l2 9H3z" stroke="#f97316" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                    <line x1="3" y1="20" x2="21" y2="20" stroke="#f97316" stroke-width="1.8" stroke-linecap="round"/>
-                  </svg>
+                <div class="ratings-container">
+                    <h3 class="section-title">DRIVER RATINGS 📈</h3>
+                    <div class="ratings-card">
+                        <div class="rating-row">
+                            <div class="rating-header">
+                                <span>SAFETY RATING (SR)</span>
+                                <span class="highlight-orange">S 4.98</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 95%;"></div>
+                            </div>
+                        </div>
+                        <div class="rating-row">
+                            <div class="rating-header">
+                                <span>DRIVER RATING (DR)</span>
+                                <span class="highlight-orange">A+ 7,420</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 80%;"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="license-meta">License</div>
-                <div class="license-name">Pro Series</div>
-              </div>
-              <div class="license-card">
-                <div class="license-icon-wrap">
-                  <svg viewBox="0 0 24 24" fill="none">
-                    <path d="M5 4h14M5 20h14" stroke="#f97316" stroke-width="1.8" stroke-linecap="round"/>
-                    <path d="M6 4c0 6 6 8 6 10S12 20 6 20" stroke="#f97316" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M18 4c0 6-6 8-6 10s0 6 6 6" stroke="#f97316" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
+
+                <div class="licenses-container">
+                    <h3 class="section-title">ACTIVE LICENSES</h3>
+                    <div class="licenses-row">
+                        <div class="license-card">
+                            <div class="license-icon">👑</div>
+                            <span class="license-label">LICENSE</span>
+                            <span class="license-name">Pro Series</span>
+                        </div>
+                        <div class="license-card">
+                            <div class="license-icon">⏳</div>
+                            <span class="license-label">LICENSE</span>
+                            <span class="license-name">Endurance A</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="license-meta">License</div>
-                <div class="license-name">Endurance A</div>
-              </div>
-            </div>
-          </div>
 
-        </div>
-      </main>
+            </section>
 
-      <nav class="bottom-nav">
-        <div class="nav-item active">
-          <div class="nav-label">Drive</div>
-        </div>
-        <div class="nav-item">
-          <div class="nav-label">Setup</div>
-        </div>
-        <div class="nav-item">
-          <div class="nav-label">Team</div>
-        </div>
-        <div class="nav-item">
-          <div class="nav-label">Settings</div>
-        </div>
-      </nav>
+        </main>
+
+        <nav class="bottom-nav">
+            <a href="#" class="nav-item active">
+                <span class="nav-icon">🏎️</span>
+                <span class="nav-label">DRIVE</span>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="nav-icon">🔧</span>
+                <span class="nav-label">SETUP</span>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="nav-icon">👥</span>
+                <span class="nav-label">TEAM</span>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="nav-icon">⚙️</span>
+                <span class="nav-label">SETTINGS</span>
+            </a>
+        </nav>
+
     </div>
-  </body>
+
+</body>
 </html>
