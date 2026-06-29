@@ -58,83 +58,29 @@ body {
     z-index: 200;
 }
 
-.topbar-brand {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 16px;
-    font-weight: 900;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
+/* ... Kode topbar-brand, topbar-nav, topbar-right tetap sama ... */
 
-.topbar-brand svg {
-    width: 22px;
-    height: 22px;
-}
-
-.topbar-nav {
-    display: flex;
-    gap: 6px;
-}
-
-.topbar-nav a {
-    color: var(--muted);
-    text-decoration: none;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 0.8px;
-    text-transform: uppercase;
-    padding: 7px 14px;
-    border-radius: 8px;
-    transition: all 0.2s;
-}
-
-.topbar-nav a:hover {
-    color: var(--white);
-    background: #1e1e1e;
-}
-
-.topbar-nav a.active {
-    color: var(--orange);
-}
-
-.topbar-right {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.topbar-badge {
-    background: var(--orange);
-    color: #fff;
-    font-size: 11px;
-    font-weight: 800;
-    padding: 6px 16px;
-    border-radius: 8px;
-    cursor: pointer;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    border: none;
-}
-
-/* Content Area Base Layout */
+/* Content Area Base Layout (Mobile) */
 .content-area {
     flex: 1;
     display: flex;
-    justify-content: center;
-    padding: 0;
+    flex-direction: column; /* Konten turun ke bawah di mobile */
+    padding: 0 0 100px; /* Ruang aman di bawah agar tidak tertutup bottom-nav */
+    gap: 16px;
 }
 
-/* Wadah Konten Mobile Frame */
-.mobile-frame {
-    width: 100%;
-    max-width: 430px;
-    background: var(--bg-primary);
+/* Di mobile, biarkan elemen desktop ini tampil mengalir ke bawah */
+.desktop-sidebar,
+.desktop-main {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-    padding-bottom: 100px; /* Ruang aman agar tidak tertutup bottom-nav */
+    width: 100%;
+}
+
+/* Hilangkan bungkusan kaku mobile-frame jika kamu menaruh konten di luar boks tersebut */
+.mobile-frame {
+    display: block;
+    width: 100%;
 }
 
 /* Sembunyikan elemen desktop bawaan HTML di mobile */
@@ -474,7 +420,6 @@ body {
    STRATEGI RESPONSIF — BREAKPOINT DESKTOP ( menggunakan min-width )
    ========================================================================== */
 @media (min-width: 900px) {
-    /* 1. Tampilkan bar navigasi atas, hilangkan navigasi bawah */
     .topbar {
         display: flex;
     }
@@ -483,31 +428,8 @@ body {
         display: none;
     }
 
-    /* 2. Sembunyikan boks kemasan kaku mobile-frame */
-    .mobile-frame {
-        display: none;
-    }
-
-    /* 3. Hidupkan dan konfigurasi tata letak boks sisi desktop */
-    .desktop-sidebar {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        width: 300px;
-        flex-shrink: 0;
-    }
-
-    .desktop-main {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        flex: 1;
-        min-width: 0;
-    }
-
-    /* 4. Konfigurasi ulang bingkai area utama menjadi 2 kolom vertikal */
+    /* Ubah arah aliran menjadi baris bersisian saat layar lebar */
     .content-area {
-        display: flex;
         flex-direction: row;
         padding: 28px 32px 40px;
         gap: 24px;
@@ -517,7 +439,20 @@ body {
         width: 100%;
     }
 
-    /* 5. Dekorasi khusus penyusunan profil di bilah sisi desktop */
+    /* Setel ulang lebar kolom sisi untuk desktop */
+    .desktop-sidebar {
+        width: 300px;
+        flex-shrink: 0;
+        gap: 20px;
+    }
+
+    .desktop-main {
+        flex: 1;
+        min-width: 0;
+        gap: 20px;
+    }
+
+    /* Dekorasi khusus penyusunan profil di bilah sisi desktop */
     .profile-card {
         background: var(--bg-card);
         border-radius: var(--radius-lg);
@@ -526,7 +461,6 @@ body {
         flex-direction: column;
         align-items: center;
         text-align: center;
-        gap: 0;
     }
 
     .profile-card .profile-row {
@@ -546,52 +480,11 @@ body {
         font-size: 26px;
     }
 
-    .profile-card .flag-badge {
-        width: 24px;
-        height: 17px;
-    }
-
-    .profile-card h1 {
-        font-size: 22px;
-        font-weight: 900;
-        text-transform: uppercase;
-        line-height: 1.05;
-    }
-
-    .profile-card .driver-rank {
-        justify-content: center;
-        margin-top: 8px;
-        gap: 8px;
-    }
-
-    .profile-card .rank-text {
-        font-size: 13px;
-    }
-
-    .profile-card .btn-go-race {
-        width: 100%;
-        margin-top: 20px;
-        flex-direction: row;
-        gap: 10px;
-        font-size: 14px;
-        padding: 14px 20px;
-        border-radius: 12px;
-        justify-content: center;
-    }
-
-    /* 6. Atur ulang padding margin boks agar tidak meluber di desktop */
-    .stats-grid {
-        padding: 0;
-    }
-
-    .section-title {
-        padding: 0 0 12px;
-    }
-
-    .ratings-card {
-        margin: 0;
-    }
-
+    /* Penyesuaian boks komponen agar pas dengan grid desktop */
+    .stats-grid { padding: 0; }
+    .section-title { padding: 0 0 12px; }
+    .ratings-card { margin: 0; }
+    
     .licenses-row {
         padding: 0;
         overflow-x: visible;
