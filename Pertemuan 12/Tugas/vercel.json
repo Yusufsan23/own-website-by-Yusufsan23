@@ -1,5 +1,5 @@
 {
   "rewrites": [
-    { "source": "/", "destination": "/animasi-pratikum.html" }
+    { "source": "/", "destination": "/halaman-utama.html" }
   ]
 }
