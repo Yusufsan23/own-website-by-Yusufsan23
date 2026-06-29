@@ -409,30 +409,6 @@ body {
         background: var(--primary-orange);
     }
 
-    .btn-logout {
-        background: transparent;
-        border: 1px solid var(--border);
-        color: var(--text-muted);
-        padding: 8px 18px;
-        border-radius: 6px;
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 600;
-        font-size: 13px;
-        cursor: pointer;
-        /* Tambahkan transisi agar perubahan warna smooth */
-        transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
-    }
-
-    /* Efek ketika kursor diarahkan ke tombol logout */
-    .btn-logout:hover {
-        background-color: #ea4335;
-        /* Warna merah khas logout/danger */
-        color: #ffffff;
-        /* Teks berubah jadi putih bersih */
-        border-color: #ea4335;
-        /* Border ikut menyala merah */
-    }
-
     .bottom-nav {
         display: none;
         /* Matikan menu bawah */
