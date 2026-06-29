@@ -284,6 +284,28 @@ body {
     margin-top: 2px;
 }
 
+/* Tombol Logout Mobile & Tablet */
+.btn-logout-mobile {
+    width: 100%;
+    padding: 12px;
+    background: transparent;
+    border: 1px solid #3a3f55;
+    border-radius: var(--radius-md);
+    color: var(--text-muted);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.btn-logout-mobile:hover {
+    background-color: rgba(234, 67, 53, 0.1); /* Merah transparan tipis */
+    border-color: #ea4335;
+    color: #ffffff;
+}
+
 /* ==========================================================================
    MOBILE BOTTOM NAVIGATION BAR
    ========================================================================== */
